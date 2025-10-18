@@ -1,0 +1,76 @@
+import java.util.Date;
+import java.util.List;
+
+public class Order {
+    private int orderId;
+    private Provider provider;
+    private Collector collector;
+    private Date orderDate;
+    private List<FoodItem> orderedItems; // Items that were ordered
+    private List<FoodItem> requestedItems; // Items that were requested
+    private String status; // New field for order status
+    private String notes; // Field for order notes
+
+    // Constructor
+    public Order(int orderId, Provider provider, Collector collector, Date orderDate, List<FoodItem> orderedItems, List<FoodItem> requestedItems) {
+        this.orderId = orderId;
+        this.provider = provider;
+        this.collector = collector;
+        this.orderDate = orderDate;
+        this.orderedItems = orderedItems;
+        this.requestedItems = requestedItems;
+        this.status = "Pending"; // Default status
+        this.notes = ""; // Default empty notes
+    }
+
+    // Getters
+    public Provider getProvider() {
+        return provider;
+    }
+
+    public Collector getCollector() {
+        return collector;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public List<FoodItem> getOrderedItems() {
+        return orderedItems; // Return ordered items
+    }
+
+    public List<FoodItem> getRequestedItems() {
+        return requestedItems; // Return requested items
+    }
+
+    public String getStatus() {
+        return status; // Getter for status
+    }
+
+    public void setStatus(String status) {
+        this.status = status; // Setter for status (optional, if you need to update it)
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public String getNotes() {
+        return notes != null ? notes : "";
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    @Override
+    public String toString() {
+        return "Order ID: " + orderId +
+               ", Provider: " + provider.getName() +
+               ", Collector: " + collector.getUsername() +
+               ", Date: " + orderDate +
+               ", Status: " + status +
+               (notes != null && !notes.isEmpty() ? ", Notes: " + notes : "");
+    }
+}

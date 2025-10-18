@@ -1,0 +1,3 @@
+javac -encoding UTF-8 --module-path "C:\Users\ramar\OneDrive\Desktop\javaproject\Food_gui\lib\javafx-sdk" --add-modules javafx.controls,javafx.fxml,javafx.web,javafx.graphics,javafx.swing MapViewer.java
+
+java --module-path "C:\Users\ramar\OneDrive\Desktop\javaproject\Food_gui\lib\javafx-sdk" --add-modules javafx.controls,javafx.fxml,javafx.web,javafx.graphics,javafx.swing -Dprism.order=sw MapViewer
