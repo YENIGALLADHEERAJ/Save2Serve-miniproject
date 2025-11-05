@@ -32,7 +32,7 @@ The Food Application is a Java-based project designed to connect food providers 
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/bunnysunny24/Food_gui.git
+   git clone https://github.com/YENIGALLADHEERAJ/Food_gui.git
    cd Food_gui
    ```
 
@@ -86,4 +86,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **OpenJFX**: For providing the JavaFX framework.
 - **MySQL**: For the relational database management system.
+
 
